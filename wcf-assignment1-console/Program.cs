@@ -19,7 +19,6 @@ namespace wcf_assignment1_console
             int number1;
             int number2;
 
-            //wcfAssignment1.Service1Client service1Client = new wcfAssignment1.Service1Client();
             wcfAssignment1.Service1Client service1Client = new wcfAssignment1.Service1Client();
 
             string select = "";

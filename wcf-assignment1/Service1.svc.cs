@@ -55,20 +55,39 @@ namespace wcf_assignment1
             return output;
         }
 
-        public int sortNumber(int sortNum)
+        public int[] sortNumber(int[] sortNum)
         {
-            int[] sortNum1 = new int[5];
+            sortNum = new int[5];
+            Console.WriteLine("1. Ascending");
+            Console.WriteLine("2. Descending");
 
-            // Sort the arr in decreasing order
-            // and return a array
-            sortNum1 = sortNum1.OrderByDescending(c => c).ToArray();
-
-            // print all element of array
-            foreach(int num in sortNum1)
+            string sort = "";
+            int output;
+            int output1;
+            if (sort == "1")
             {
-                return num;
+                Console.WriteLine("Sorted array in ASC order");
+                Array.Sort(sortNum);
+                foreach (int i in sortNum)
+                {
+                    output = i;
+                }
+                return sortNum;
             }
-            return sortNum1.Length;
+
+            else if(sort == "2")
+            {
+                Console.WriteLine("Sorted array in DESC order");
+                // Sort Array in DESC order
+                Array.Reverse(sortNum);
+                foreach (int i in sortNum)
+                {
+                    output1 = i;
+                }
+                return sortNum;
+            }
+            return null;
+            
         }
     }
 }

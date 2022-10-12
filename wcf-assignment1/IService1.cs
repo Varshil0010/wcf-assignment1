@@ -19,6 +19,6 @@ namespace wcf_assignment1
         [OperationContract]
         string reverseString(string reverse);
         [OperationContract]
-        int sortNumber (int sortNum);
+        int[] sortNumber (int[] sortNum);
     }
 }
