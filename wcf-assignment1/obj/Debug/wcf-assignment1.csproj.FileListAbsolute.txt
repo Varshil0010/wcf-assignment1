@@ -5,3 +5,10 @@ E:\Varshil\Sem-5\PROG3170-22F-Sec2-Programming Distributed Applic\Week 5\wcf-ass
 E:\Varshil\Sem-5\PROG3170-22F-Sec2-Programming Distributed Applic\Week 5\wcf-assignment1\wcf-assignment1\obj\Debug\wcf-assignment1.csproj.CoreCompileInputs.cache
 E:\Varshil\Sem-5\PROG3170-22F-Sec2-Programming Distributed Applic\Week 5\wcf-assignment1\wcf-assignment1\obj\Debug\wcf-assignment1.dll
 E:\Varshil\Sem-5\PROG3170-22F-Sec2-Programming Distributed Applic\Week 5\wcf-assignment1\wcf-assignment1\obj\Debug\wcf-assignment1.pdb
+C:\Users\varsh\OneDrive\Documents\GitHub\wcf-assignment1\wcf-assignment1\bin\wcf-assignment1.dll.config
+C:\Users\varsh\OneDrive\Documents\GitHub\wcf-assignment1\wcf-assignment1\bin\wcf-assignment1.dll
+C:\Users\varsh\OneDrive\Documents\GitHub\wcf-assignment1\wcf-assignment1\bin\wcf-assignment1.pdb
+C:\Users\varsh\OneDrive\Documents\GitHub\wcf-assignment1\wcf-assignment1\obj\Debug\wcf-assignment1.csproj.AssemblyReference.cache
+C:\Users\varsh\OneDrive\Documents\GitHub\wcf-assignment1\wcf-assignment1\obj\Debug\wcf-assignment1.csproj.CoreCompileInputs.cache
+C:\Users\varsh\OneDrive\Documents\GitHub\wcf-assignment1\wcf-assignment1\obj\Debug\wcf-assignment1.dll
+C:\Users\varsh\OneDrive\Documents\GitHub\wcf-assignment1\wcf-assignment1\obj\Debug\wcf-assignment1.pdb

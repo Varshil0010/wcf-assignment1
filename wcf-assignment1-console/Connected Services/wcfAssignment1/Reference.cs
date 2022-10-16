@@ -34,10 +34,10 @@ namespace wcf_assignment1_console.wcfAssignment1 {
         System.Threading.Tasks.Task<string> reverseStringAsync(string reverse);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/sortNumber", ReplyAction="http://tempuri.org/IService1/sortNumberResponse")]
-        int sortNumber(int sortNum);
+        int[] sortNumber(int[] sortNum);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/sortNumber", ReplyAction="http://tempuri.org/IService1/sortNumberResponse")]
-        System.Threading.Tasks.Task<int> sortNumberAsync(int sortNum);
+        System.Threading.Tasks.Task<int[]> sortNumberAsync(int[] sortNum);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -91,11 +91,11 @@ namespace wcf_assignment1_console.wcfAssignment1 {
             return base.Channel.reverseStringAsync(reverse);
         }
         
-        public int sortNumber(int sortNum) {
+        public int[] sortNumber(int[] sortNum) {
             return base.Channel.sortNumber(sortNum);
         }
         
-        public System.Threading.Tasks.Task<int> sortNumberAsync(int sortNum) {
+        public System.Threading.Tasks.Task<int[]> sortNumberAsync(int[] sortNum) {
             return base.Channel.sortNumberAsync(sortNum);
         }
     }

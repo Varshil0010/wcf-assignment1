@@ -16,10 +16,11 @@ namespace wcf_assignment1_console
             string num2;
             string value1;
             string value2;
-            int number1;
-            int number2;
+            int [] number1 = new int [5];
+            
 
-            wcfAssignment1.Service1Client service1Client = new wcfAssignment1.Service1Client();
+            //wcfAssignment1.Service1Client service1Client = new wcfAssignment1.Service1Client();
+            wcfAssignment1.Service1Client service1Client = new wcfAssignment1.Service1Client(); 
 
             string select = "";
 
@@ -66,11 +67,20 @@ namespace wcf_assignment1_console
                 }
                 else if(select == "5")
                 {
-                    Console.WriteLine("Enter five numbers");
-                    number1 = Convert.ToInt32(Console.ReadLine());
+                    for(int i= 0; i < 5; i++)
+                    {
+                        Console.WriteLine("Enter number" +(i+1));
+                        number1[i] = int.Parse(Console.ReadLine());
+                    }
+                    
 
-                    number2 = service1Client.sortNumber(number1);
-                    Console.WriteLine(number2);
+                    int[] number2 = service1Client.sortNumber(number1);
+                    //Display the Ascending values one by one  
+                    Console.Write("Ascending Sort : ");
+                    for (int i = 0; i < 5; i++)
+                    {
+                        Console.Write(number2[i] + " ");
+                    }
 
                 }
             }
