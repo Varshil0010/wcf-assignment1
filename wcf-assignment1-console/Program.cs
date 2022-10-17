@@ -17,9 +17,12 @@ namespace wcf_assignment1_console
             string value1;
             string value2;
             int [] number1 = new int [5];
+            string sort = "";
+            string htmlValue;
+            string stringValue;
+            string htmlString;
             
-
-            //wcfAssignment1.Service1Client service1Client = new wcfAssignment1.Service1Client();
+            //wcfAssignment1.Service1Client service1Client = new wcfAssignment1.Service1Client(); 
             wcfAssignment1.Service1Client service1Client = new wcfAssignment1.Service1Client(); 
 
             string select = "";
@@ -63,24 +66,59 @@ namespace wcf_assignment1_console
                 }
                 else if (select == "4")
                 {
-                    Console.WriteLine("You select 4");
+                    Console.WriteLine("Enter a html tag");
+                    htmlValue = Convert.ToString(Console.ReadLine());
+
+                    Console.WriteLine("Enter a string");
+                    stringValue = Convert.ToString(Console.ReadLine());
+
+                    htmlString = service1Client.printHtmlTags(htmlValue, stringValue);
+                    Console.WriteLine(htmlString);
+
                 }
                 else if(select == "5")
                 {
-                    for(int i= 0; i < 5; i++)
+                    enter: 
+                    Console.WriteLine("Enter Asc or Desc");
+                    sort = Convert.ToString(Console.ReadLine());
+                    if (sort == "Asc")
                     {
-                        Console.WriteLine("Enter number" +(i+1));
-                        number1[i] = int.Parse(Console.ReadLine());
+                        for (int i = 0; i < 5; i++)
+                        {
+                            Console.WriteLine("Enter number" + (i + 1));
+                            number1[i] = int.Parse(Console.ReadLine());
+                        }
+
+
+                        int[] number2 = service1Client.sortNumber(number1);
+                        // Ascending 
+                        Console.Write("Ascending Sort : ");
+                        for (int i = 0; i < 5; i++)
+                        {
+                            Console.Write(number2[i] + " ");
+                        }
+                    }
+                    else if (sort == "Desc")
+                    {
+                        for (int i = 0; i < 5; i++)
+                        {
+                            Console.WriteLine("Enter number" + (i + 1));
+                            number1[i] = int.Parse(Console.ReadLine());
+                        }
+
+                        int[] number2 = service1Client.desSortNumber(number1);
+                        // Descending
+                        Console.WriteLine("Descending Sort :");
+                        for (int i = 0; i < 5; i++)
+                        {
+                            Console.Write(number2[i] + " ");
+                        }
+                    }
+                    else
+                    {
+                        goto enter;
                     }
                     
-
-                    int[] number2 = service1Client.sortNumber(number1);
-                    //Display the Ascending values one by one  
-                    Console.Write("Ascending Sort : ");
-                    for (int i = 0; i < 5; i++)
-                    {
-                        Console.Write(number2[i] + " ");
-                    }
 
                 }
             }

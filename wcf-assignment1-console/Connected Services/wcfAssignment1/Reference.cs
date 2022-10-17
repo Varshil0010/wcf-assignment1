@@ -38,6 +38,18 @@ namespace wcf_assignment1_console.wcfAssignment1 {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/sortNumber", ReplyAction="http://tempuri.org/IService1/sortNumberResponse")]
         System.Threading.Tasks.Task<int[]> sortNumberAsync(int[] sortNum);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/desSortNumber", ReplyAction="http://tempuri.org/IService1/desSortNumberResponse")]
+        int[] desSortNumber(int[] desSortNum);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/desSortNumber", ReplyAction="http://tempuri.org/IService1/desSortNumberResponse")]
+        System.Threading.Tasks.Task<int[]> desSortNumberAsync(int[] desSortNum);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/printHtmlTags", ReplyAction="http://tempuri.org/IService1/printHtmlTagsResponse")]
+        string printHtmlTags(string htmlTags, string stringValue);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/printHtmlTags", ReplyAction="http://tempuri.org/IService1/printHtmlTagsResponse")]
+        System.Threading.Tasks.Task<string> printHtmlTagsAsync(string htmlTags, string stringValue);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -97,6 +109,22 @@ namespace wcf_assignment1_console.wcfAssignment1 {
         
         public System.Threading.Tasks.Task<int[]> sortNumberAsync(int[] sortNum) {
             return base.Channel.sortNumberAsync(sortNum);
+        }
+        
+        public int[] desSortNumber(int[] desSortNum) {
+            return base.Channel.desSortNumber(desSortNum);
+        }
+        
+        public System.Threading.Tasks.Task<int[]> desSortNumberAsync(int[] desSortNum) {
+            return base.Channel.desSortNumberAsync(desSortNum);
+        }
+        
+        public string printHtmlTags(string htmlTags, string stringValue) {
+            return base.Channel.printHtmlTags(htmlTags, stringValue);
+        }
+        
+        public System.Threading.Tasks.Task<string> printHtmlTagsAsync(string htmlTags, string stringValue) {
+            return base.Channel.printHtmlTagsAsync(htmlTags, stringValue);
         }
     }
 }

@@ -76,6 +76,26 @@ namespace wcf_assignment1
            return sortNum;
 
         }
+
+        
+
+        public string printHtmlTags(string htmlTags, string stringValue)
+        {
+            var stringBuilder = new StringBuilder();
+            stringBuilder.Append("<" + htmlTags + ">");
+            stringBuilder.Append(stringValue);
+            stringBuilder.Append("</" + htmlTags + ">");
+            //to get the html use
+            var stringHtml = stringBuilder.ToString();
+            return stringHtml;
+        }
+
+        public int[] desSortNumber(int[] desSortNum)
+        {
+            Array.Sort<int>(desSortNum, delegate (int i, int a)
+            { return a - i; });
+            return desSortNum;
+        }
     }
 }
 

@@ -31,6 +31,18 @@
   <wsdl:message name="IService1_sortNumber_OutputMessage">
     <wsdl:part name="parameters" element="tns:sortNumberResponse" />
   </wsdl:message>
+  <wsdl:message name="IService1_desSortNumber_InputMessage">
+    <wsdl:part name="parameters" element="tns:desSortNumber" />
+  </wsdl:message>
+  <wsdl:message name="IService1_desSortNumber_OutputMessage">
+    <wsdl:part name="parameters" element="tns:desSortNumberResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_printHtmlTags_InputMessage">
+    <wsdl:part name="parameters" element="tns:printHtmlTags" />
+  </wsdl:message>
+  <wsdl:message name="IService1_printHtmlTags_OutputMessage">
+    <wsdl:part name="parameters" element="tns:printHtmlTagsResponse" />
+  </wsdl:message>
   <wsdl:portType name="IService1">
     <wsdl:operation name="primeNumber">
       <wsdl:input wsaw:Action="http://tempuri.org/IService1/primeNumber" message="tns:IService1_primeNumber_InputMessage" />
@@ -47,6 +59,14 @@
     <wsdl:operation name="sortNumber">
       <wsdl:input wsaw:Action="http://tempuri.org/IService1/sortNumber" message="tns:IService1_sortNumber_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IService1/sortNumberResponse" message="tns:IService1_sortNumber_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="desSortNumber">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/desSortNumber" message="tns:IService1_desSortNumber_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/desSortNumberResponse" message="tns:IService1_desSortNumber_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="printHtmlTags">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/printHtmlTags" message="tns:IService1_printHtmlTags_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/printHtmlTagsResponse" message="tns:IService1_printHtmlTags_OutputMessage" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="BasicHttpBinding_IService1" type="tns:IService1">
@@ -80,6 +100,24 @@
     </wsdl:operation>
     <wsdl:operation name="sortNumber">
       <soap:operation soapAction="http://tempuri.org/IService1/sortNumber" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="desSortNumber">
+      <soap:operation soapAction="http://tempuri.org/IService1/desSortNumber" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="printHtmlTags">
+      <soap:operation soapAction="http://tempuri.org/IService1/printHtmlTags" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>

@@ -20,5 +20,9 @@ namespace wcf_assignment1
         string reverseString(string reverse);
         [OperationContract]
         int [] sortNumber(int [] sortNum);
+        [OperationContract]
+        int [] desSortNumber(int [] desSortNum);
+        [OperationContract]
+        string printHtmlTags(string htmlTags, string stringValue);
     }
 }
